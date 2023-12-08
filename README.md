@@ -2,7 +2,12 @@
 
 Vite vite!⚡
 
-My first three.js project
+✨ My first three.js project
+
+👾 erica de guzman
+
+https://threejs-journey.com/
+Course by Bruno Simon
 
 ## Getting started
 
