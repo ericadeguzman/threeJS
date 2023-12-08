@@ -1,13 +1,10 @@
-# threeJS
-
-Vite vite!⚡
-
-✨ My first three.js project
-
-👾 erica de guzman
+# My first three.js project
 
 https://threejs-journey.com/
-Course by Bruno Simon
+✨ Course by Bruno Simon
+
+👾 erica de guzman
+⚡Vite vite!
 
 ## Getting started
 
