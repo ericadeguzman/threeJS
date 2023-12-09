@@ -10,4 +10,6 @@ https://threejs-journey.com/
 
 ⏯️ Start the project by running:
 `npm run dev`
+
+<br />
 ![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
