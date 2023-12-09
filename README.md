@@ -11,4 +11,4 @@ https://threejs-journey.com/
 ⏯️ Start the project by running:
 `npm run dev`
 
-![hippo](https://media3.giphy.com/media/aUovxH8Vf9qDu/giphy.gif)
+![til](/06/exercise/src/myCub3.gif)
