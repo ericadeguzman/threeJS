@@ -17,13 +17,6 @@ window.addEventListener("mousemove", (event) => {
 
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
-
-// Sizes
-const sizes = {
-  width: 800,
-  height: 600,
-};
-
 // Scene
 const scene = new THREE.Scene();
 
@@ -34,14 +27,15 @@ const mesh = new THREE.Mesh(
 );
 scene.add(mesh);
 
+// Sizes
+const sizes = {
+  width: 800,
+  height: 600,
+};
+
 // Camera
 const aspectRatio = sizes.width / sizes.height;
-const camera = new THREE.PerspectiveCamera(
-  75,
-  sizes.width / sizes.height,
-  0.1,
-  100
-);
+const camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 100);
 // const camera = new THREE.OrthographicCamera(
 //   -1 * aspectRatio,
 //   1 * aspectRatio,
@@ -54,16 +48,14 @@ const camera = new THREE.PerspectiveCamera(
 // camera.position.x = 0;
 // camera.position.z = 2;
 // camera.position.z = 2;
-
-camera.lookAt(mesh.position);
+camera.position.z = 3;
+// camera.lookAt(mesh.position);
 scene.add(camera);
 
 // Controls
 const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 
-//Update controls
-controls.update();
 // Renderer
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
@@ -76,12 +68,13 @@ const clock = new THREE.Clock();
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();
 
-  // Update camera
-  camera.position.x = Math.sin(cursor.x * Math.PI * 2) * 3;
-  camera.position.z = Math.cos(cursor.x * Math.PI * 2) * 3;
-  camera.position.y = cursor.y * 5;
-  camera.lookAt(mesh.position);
-
+  // Update camera if you want to use cursor w/out clicking
+  // camera.position.x = Math.sin(cursor.x * Math.PI * 2) * 3;
+  // camera.position.z = Math.cos(cursor.x * Math.PI * 2) * 3;
+  // camera.position.y = cursor.y * 5;
+  // camera.lookAt(mesh.position);
+  //Update controls
+  controls.update();
   // Render
   renderer.render(scene, camera);
 
