@@ -7,6 +7,8 @@ https://threejs-journey.com/
 ⚡Vite vite!
 
 ## Getting started
+Install node modules:
+`npm i`
 
 ⏯️ Start the project by running:
 `npm run dev`
