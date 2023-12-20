@@ -8,7 +8,7 @@ import GUI from 'lil-gui'
  * Base
  */
 // Debug
-const gui = new GUI()
+// const gui = new GUI()
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -39,16 +39,16 @@ gltfLoader.load(
  * Floor
  */
 const floor = new THREE.Mesh(
-    new THREE.PlaneGeometry(50, 50),
+    new THREE.PlaneGeometry(10, 10),
     new THREE.MeshStandardMaterial({
-        color: '#444444',
+        color: '#fff',
         metalness: 0,
         roughness: 0.5
     })
 )
 floor.receiveShadow = true
 floor.rotation.x = - Math.PI * 0.5
-scene.add(floor)
+// scene.add(floor)
 
 /**
  * Lights
@@ -106,9 +106,12 @@ controls.enableDamping = true
 /**
  * Renderer
  */
+
 const renderer = new THREE.WebGLRenderer({
     canvas: canvas
 })
+renderer.setClearColor( 0x000000, 0 ); // the default
+
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 renderer.setSize(sizes.width, sizes.height)

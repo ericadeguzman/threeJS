@@ -9,11 +9,23 @@ body
 {
     overflow: hidden;
 }
-
+h1 {
+    font-size: 64px;
+    line-height: 64px;
+    z-index: 2000;
+    text-align: center;
+    margin-top:2%;
+    font-weight: 800;
+    font-family: 'BioRhyme', serif;
+    color:#C6001E;
+}
 .webgl
 {
+    z-index: 1;
     position: fixed;
     top: 0;
     left: 0;
     outline: none;
+    background: none;
+
 }
