@@ -13,4 +13,4 @@ Install node modules:
 ⏯️ Start the project by running:
 `npm run dev`
 
-![til](/06/exercise/src/myCub3.gif)
+![til](/06/exercise/src/myHamburger.gif)
